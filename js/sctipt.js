@@ -6,10 +6,10 @@ alert('fizzquiz');
 for(var i=100; i>=0; i--){
   console.log(i);
   document.getElementById('listaNumeri').innerHTML += '<li>'+ i+ '</li>';
-  if(i % 3 == 0)
-  console.log('fizz');
+  if(i % 5 == 0 && i % 3 == 0)
+  console.log('fizzbuzz');
   else if (i % 5 == 0)
   console.log('Buzz');
-  else if(i % 5 == 0 && i % 3 == 0)
-  console.log('fizzBuzz');
+  else if(i % 3 == 0)
+  console.log('fizz');
 }
