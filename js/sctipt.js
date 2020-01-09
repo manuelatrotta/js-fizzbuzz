@@ -3,13 +3,14 @@ alert('fizzquiz');
 //step 1: scrivere un programma che stampi i numeri da 1 a 100
 //step 2:individua multipli di 3 e stampa 'Fizz' al posto del numero
 //step 3:individua multipli di 3 e 5 ergo di 15 e stampa 'fizzbuzz'
-for(var i=100; i>=0; i--){
+for(var i=0; i<=100; i++){
   console.log(i);
   document.getElementById('listaNumeri').innerHTML += '<li>'+ i+ '</li>';
-  if(i % 5 == 0 && i % 3 == 0)
+  if(i % 5 == 0 && i % 3 == 0){
   console.log('fizzbuzz');
-  else if(i % 3 == 0)
+  }else if(i % 3 == 0)
   console.log('fizz');
-  else if (i % 5 == 0)
+  else if (i % 5 == 0){
   console.log('Buzz');
+  }
 }
