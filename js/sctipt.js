@@ -4,13 +4,20 @@ alert('fizzquiz');
 //step 2:individua multipli di 3 e stampa 'Fizz' al posto del numero
 //step 3:individua multipli di 3 e 5 ergo di 15 e stampa 'fizzbuzz'
 for(var i=0; i<=100; i++){
-  console.log(i);
-  document.getElementById('listaNumeri').innerHTML += '<li>'+ i+ '</li>';
+  var contenuto = document.getElementById('listaNumeri').innerHTML;
+  var testo = '<li>'+ i+ '</li>';
+
   if(i % 5 == 0 && i % 3 == 0){
-  console.log('fizzbuzz');
-  }else if(i % 3 == 0){
-  console.log('fizz');
-  }else if (i % 5 == 0){
-  console.log('Buzz');
+  testo = '<li>fizzbuzz</li>';
+  console.log(i, 'fizzbuzz');
   }
+  else if(i % 3 == 0){
+  testo = '<li>fizz</li>';
+  console.log(i, 'fizz');
+  }
+  else if (i % 5 == 0){
+  testo = '<li>Buzz</li>';
+  console.log(i, 'Buzz');
+  }
+  document.getElementById('listaNumeri').innerHTML = contenuto + testo;
 }
